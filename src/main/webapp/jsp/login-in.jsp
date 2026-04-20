@@ -8,12 +8,8 @@
 		<div class="col-4 card p-2">
 			<form class="px-4" action="#" method="post">
   				<div class="mb-3">
-    				<label for="login_id" class="form-label">ロックインID</label>
-    				<input type="text" class="form-control" id="login_id">
-  				</div>
-  				<div class="mb-3">
-    				<label for="name" class="form-label">名前</label>
-    				<input type="text" class="form-control" id="name">
+    				<label for="login" class="form-label">ロックインID</label>
+    				<input type="text" class="form-control" id="login">
   				</div>
   				<div class="mb-3">	
     				<label for="password" class="form-label">パスワード</label>
