@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@include file="/common/header.html"%>
 
-こんにちは! ${user.login}さん.
+ロックイン名またはパスワードが違いです。
 
-<%@include file="/common/header.html"%>
+<%@include file="/common/footer.html"%>

@@ -6,7 +6,7 @@
 	<h3 class="text-center">健康診管理アプリ</h3>
 	<div class="row justify-content-center">
 		<div class="col-4 card p-2">
-			<form class="px-4" action="#" method="post">
+			<form class="px-4" action="Login.action" method="post">
   				<div class="mb-3">
     				<label for="login" class="form-label">ロックインID</label>
     				<input type="text" class="form-control" id="login">
