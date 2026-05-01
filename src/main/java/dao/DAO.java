@@ -9,9 +9,9 @@ public class DAO {
 	static DataSource ds;
 	
 	public Connection getConnection() throws Exception {
-		if(ds==null) {
+		if (ds==null) {
 			InitialContext ic=new InitialContext();
-			ds = (DataSource)ic.lookup("java:comp/env/jdbc/HealthDB");
+			ds=(DataSource)ic.lookup("java:comp/env/jdbc/HealthDB");
 		}
 		return ds.getConnection();
 	}

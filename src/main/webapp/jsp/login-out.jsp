@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@include file="/common/header.html"%>
 
-こんにちは! ${user.login}さん.
+こんにちは！ ${user.login}さん．
 
-<%@include file="/common/header.html"%>
+<%@include file="/common/footer.html"%>

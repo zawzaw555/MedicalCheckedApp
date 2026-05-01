@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -22,17 +23,19 @@ public class FrontController extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		try {
 			String path=request.getServletPath().substring(1);
-			String name=path.replace(".a", "A").replace("/", ".");
-			@SuppressWarnings("unused")
+			String name=path.replace(".action", "Action").replace('/', '.');
 			Action action=(Action)Class.forName(name).getDeclaredConstructor().newInstance();
-		} catch(Exception e){
+			String url=action.execute(request, response);
+			request.getRequestDispatcher(url).forward(request, response);
+		} catch (Exception e) {
 			e.printStackTrace(out);
 		}
 	}
 	
-	public void doGet(
-		HttpServletRequest request,HttpServletResponse response
-	)throws ServletException,IOException {
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request,response);
 	}
 

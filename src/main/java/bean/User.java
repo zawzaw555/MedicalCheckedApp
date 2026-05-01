@@ -22,14 +22,14 @@ public class User implements Serializable {
 		return password;
 	}
 	
-	// Setter 変数宣言
-	public void setId(int id) {
-		this.id = id;
+	// Setter 宣言
+	public void setId (int id) {
+		this.id=id;
 	}
-	public void setLogin(String login) {
-		this.login = login;
+	public void setLogin (String login) {
+		this.login=login;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		this.password=password;
 	}
 }
