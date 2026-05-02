@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/header.html" %>
+<%@include file="/common/header.jsp" %>
 <div class="container pb-1">
 	<h3 class="text-center">健康診管理アプリ</h3>
 	<div class="row justify-content-center">
@@ -22,4 +22,4 @@
 	</div>
 </div>
 
-<%@include file="/common/footer.html"%>
+<%@include file="/common/footer.jsp"%>

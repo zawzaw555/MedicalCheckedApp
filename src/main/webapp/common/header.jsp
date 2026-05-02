@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,13 @@
 	crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar bg-body-tertiary mx-2 my-3">
+<nav class="navbar bg-body-tertiary mx-2 my-1">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Health-PinPin</a>
+    <h5 class="text-center justify-content-between">健康診断履歴</h5>
 	<ul class="nav justify-content-end">
   		<li class="nav-item">
     		<a class="nav-link active" aria-current="page" href="#">Home</a>
-  		</li>
-  		<li class="nav-item">
-    		<a class="nav-link" href="#">Link-1</a>
   		</li>
   		<li class="nav-item">
     		<a class="nav-link" href="#">Link-2</a>
