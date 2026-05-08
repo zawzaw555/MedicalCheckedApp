@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/header.jsp" %>
-<div class="container pb-1">
+<%@include file="/common/header-login.jsp" %>
+<div class="container mt-4 pb-1">
 	<h3 class="text-center">健康診管理アプリ</h3>
 	<div class="row justify-content-center">
 		<div class="col-4 card p-2">
@@ -15,7 +15,7 @@
     				<input type="password" class="form-control" name="password">
   				</div>
   				<div class="row justify-content-center">
-  					<button type="submit" class="col-4 btn btn-primary" value="ログイン">Submit</button>
+  					<button type="submit" class="col-4 btn btn-primary" value="ログイン">ロクイン</button>
   				</div>
 			</form>
 		</div>

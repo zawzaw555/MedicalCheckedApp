@@ -13,13 +13,12 @@
 <nav class="navbar bg-body-tertiary mx-2 my-1">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Health-PinPin</a>
-    <h5 class="text-center justify-content-between">健康診断履歴</h5>
 	<ul class="nav justify-content-end">
   		<li class="nav-item">
-    		<a class="nav-link active" aria-current="page" href="#">Home</a>
+    		<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/jsp/health-home.jsp">Home</a>
   		</li>
   		<li class="nav-item">
-    		<a class="nav-link" href="#">Link-2</a>
+    		<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Logout.action">ロクアウト</a>
   		</li>
 	</ul>
   </div>

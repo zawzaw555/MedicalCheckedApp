@@ -19,7 +19,7 @@ public class LoginAction extends Action{
 		if(user!=null) {
 			HttpSession session=request.getSession();
 			session.setAttribute("user", user);
-			return "/jsp/login-out.jsp";
+			return "/jsp/health-home.jsp";
 		}
 		
 		return "/jsp/login-error.jsp";
