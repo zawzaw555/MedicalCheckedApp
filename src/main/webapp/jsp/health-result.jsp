@@ -1,16 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="jakarta.tags.sql" %>
 <%@include file="/common/header.jsp"%>
 <div class="container">
 	<div class="row justify-content-center">
 		<h5 class="text-center">健康診断履歴</h5>
 		<div class="col-4 card p-2 m-2">
 			<h5 class="text-center">最近の健康データ</h5>
-			<p class="text-center">身長:	170 cm</p>
-			<p class="text-center">体重: 65 kg</p>
-			<p class="text-center">血圧: 120 / 80</p>
-			<p class="text-center">日付: 2026-05-01</p>
-			<p class="text-center">メモ: 体調良い</p>
+			<p class="text-center">体調:	${health.bodyType}</p>
+			<p class="text-center">身長:	${health.height} cm</p>
+			<p class="text-center">体重: ${health.weight} kg</p>
+			<p class="text-center">BMI: ${health.bmi}</p>
+			<p class="text-center">日付: ${health.checkDate}</p>
+			<p class="text-center">メモ: ${health.memo}</p>
 		</div>
 	</div>
 </div>

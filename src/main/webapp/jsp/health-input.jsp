@@ -5,7 +5,7 @@
 	<div class="row justify-content-center">
 		<h5 class="text-center">健康データ登力</h5>
 		<div class="col-4 card p-2 m-2">
-			<form class="row g-3  pt-3 align-items-center" action="#" method="post">
+			<form class="row g-3  pt-3 align-items-center" action="${pageContext.request.contextPath}/HealthCheck" method="post">
   				<div class="col-auto">
     				<label for="inputPassword6" class="col-form-label">身長: </label>
   				</div>
@@ -24,13 +24,6 @@
   				</div>
   				<div class="col-auto">
     				<span id="passwordHelpInline" class="form-text"> kg</span>
-  				</div>
-  				
-  				<div class="col-auto">
-    				<label for="inputPassword6" class="col-form-label">血圧: </label>
-  				</div>
-  				<div class="col-auto">
-    				<input type="number" class="form-control" min="0" name="pressure">
   				</div>
   				
   				<div class="col-auto">

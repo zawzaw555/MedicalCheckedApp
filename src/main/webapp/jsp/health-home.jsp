@@ -8,7 +8,7 @@
 			<a href="${pageContext.request.contextPath}/jsp/health-result.jsp">健康診断履歴</a>
 		</p>
 		<p class="justify-align-center my-3">
-			<a href="${pageContext.request.contextPath}/jsp/health-input.jsp">新規登録</a>
+			<a href="${pageContext.request.contextPath}/HealthCheck">新規登録</a>
 		</p>
 	</div>
 </div>
