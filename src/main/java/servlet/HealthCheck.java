@@ -11,16 +11,14 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 import bean.Health;
+import dao.HealthDAO;
 
-/**
- * Servlet implementation class HealthCheck
- */
 @WebServlet("/HealthCheck")
 public class HealthCheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher=request.getRequestDispatcher("/jsp/health-input.jsp");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/jsp/health-input.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -37,9 +35,22 @@ public class HealthCheck extends HttpServlet {
 		health.setMemo(memo);
 		HealthLogic healthLogic=new HealthLogic();
 		healthLogic.execute(health);
+		
+		try {
+			HealthDAO dao=new HealthDAO();
+			dao.insert(
+					health.getHeight(), 
+					health.getWeight(), 
+					health.getCheckDate(), 
+					health.getMemo()
+				);
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
 		request.setAttribute("health", health);
 		
-		RequestDispatcher dispatcher= request.getRequestDispatcher("/jsp/health-result.jsp");
+		RequestDispatcher dispatcher= request.getRequestDispatcher("/WEB-INF/jsp/health-result.jsp");
 		dispatcher.forward(request, response);
 	}
 

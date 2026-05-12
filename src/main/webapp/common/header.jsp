@@ -15,7 +15,7 @@
     <a class="navbar-brand" href="#">Health-PinPin</a>
 	<ul class="nav justify-content-end">
   		<li class="nav-item">
-    		<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/jsp/health-home.jsp">Home</a>
+    		<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/health-home.jsp">Home</a>
   		</li>
   		<li class="nav-item">
     		<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Logout.action">ロクアウト</a>

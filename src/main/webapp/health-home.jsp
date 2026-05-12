@@ -5,7 +5,7 @@
 	<div class="row text-center mt-5">
 		<h5>健康アプリへようこそ</h5>
 		<p class="justify-align-center my-3">
-			<a href="${pageContext.request.contextPath}/jsp/health-result.jsp">健康診断履歴</a>
+			<a href="${pageContext.request.contextPath}/LinkControllers?action=login">ロクイン</a>
 		</p>
 		<p class="justify-align-center my-3">
 			<a href="${pageContext.request.contextPath}/HealthCheck">新規登録</a>

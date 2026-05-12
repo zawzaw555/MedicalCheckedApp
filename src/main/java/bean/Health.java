@@ -9,7 +9,8 @@ public class Health implements Serializable {
 	
 	// DB for Health 宣言
 	private int id,user_id;
-	private double height,weight,bmi;
+	private double height,weight;
+	private int bmi;
 	private LocalDate checkDate;
 	private String memo,bodyType;
 	
@@ -26,7 +27,7 @@ public class Health implements Serializable {
 	public double getWeight() {
 		return weight;
 	}
-	public double getBmi() {
+	public int getBmi() {
 		return bmi;
 	}
 	public LocalDate getCheckDate() {
@@ -52,7 +53,7 @@ public class Health implements Serializable {
 	public void setWeight(double weight) {
 		this.weight=weight;
 	}
-	public void setBmi(double bmi) {
+	public void setBmi(int bmi) {
 		this.bmi=bmi;
 	}
 	public void setCheckDate(LocalDate checkDate) {

@@ -6,7 +6,7 @@ public class HealthLogic {
 	public void execute (Health health) {
 		double height=health.getHeight();
 		double weight=health.getWeight();
-		double bmi=weight / Math.pow(height/100.0, 2);
+		int bmi=(int)Math.round(weight / Math.pow(height/100.0, 2));
 		health.setBmi(bmi);
 		
 		String bodyType;
