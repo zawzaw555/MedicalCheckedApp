@@ -3,7 +3,7 @@
 <%@include file="/common/header.jsp"%>
 <div class="container">
 	<div class="row justify-content-center">
-		<h5 class="text-center">健康データ登力</h5>
+		<h5 class="text-center">健康データ登録</h5>
 		<div class="col-4 card p-2 m-2">
 			<form class="row g-3  pt-3 align-items-center" action="${pageContext.request.contextPath}/HealthCheck" method="post">
   				<div class="col-auto">

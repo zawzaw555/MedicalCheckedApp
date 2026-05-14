@@ -4,7 +4,7 @@
 	<div class="mt-5">
 		<h3 class="text-center">既にロクアウトされました !</h3>
 		<p class="text-center">
-			<a href="${pageContext.request.contextPath}/WEB-INF/jsp/login-in.jsp">ロクインページへ</a>
+			<a href="${pageContext.request.contextPath}/LinkControllers?action=login">ロクインページへ</a>
 		</p>
 	</div>
 <%@include file="/common/footer.jsp"%>

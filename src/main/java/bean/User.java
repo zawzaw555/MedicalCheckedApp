@@ -8,7 +8,7 @@ public class User implements Serializable {
 	
 	// DB data 変数宣言
 	private int id;
-	private String login;
+	private String name;
 	private String password;
 	
 	// Getter 宣言
@@ -16,7 +16,10 @@ public class User implements Serializable {
 		return id;
 	}
 	public String getLogin() {
-		return login;
+		return name;
+	}
+	public String getSignUp() {
+		return name;
 	}
 	public String getPassword() {
 		return password;
@@ -26,8 +29,11 @@ public class User implements Serializable {
 	public void setId (int id) {
 		this.id=id;
 	}
-	public void setLogin (String login) {
-		this.login=login;
+	public void setLogin (String name) {
+		this.name=name;
+	}
+	public void setSignUp (String name) {
+		this.name=name;
 	}
 	public void setPassword(String password) {
 		this.password=password;
