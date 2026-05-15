@@ -26,8 +26,9 @@ public class LinkControllers extends HttpServlet {
 		
 		switch (action) {
 		case "login"-> forword(request,response,"/WEB-INF/jsp/health-login.jsp");
-		case "home"	-> forword(request,response,"WEB-INF/jsp/heslth-home.jsp");
-		case "input"-> forword(request,response,"WEB-INF/jsp/health-input.jsp");
+		case "home"	-> forword(request,response,"/WEB-INF/jsp/heslth-home.jsp");
+		case "input"-> forword(request,response,"/WEB-INF/jsp/health-input.jsp");
+		case "signup"->forword(request,response,"/WEB-INF/jsp/health-signup.jsp");
 		}
 	}
 	

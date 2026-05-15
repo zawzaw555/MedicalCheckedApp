@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="/common/header-login.jsp" %>
 <div class="container mt-4 pb-1">
-	<h3 class="text-center">登録アカウント</h3>
+	<h3 class="text-center">アカウント登録</h3>
 	<div class="row justify-content-center">
 		<div class="col-4 card p-2">
 			<form class="px-4" action="${pageContext.request.contextPath}/servlet/SignUp.action" method="post">

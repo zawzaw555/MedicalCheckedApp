@@ -3,7 +3,7 @@ package tool;
 import bean.Health;
 
 public class HealthLogic {
-	public void execute (Health health) {
+	public void calc (Health health) {
 		double height=health.getHeight();
 		double weight=health.getWeight();
 		int bmi=(int)Math.round(weight / Math.pow(height/100.0, 2));

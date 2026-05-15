@@ -34,7 +34,7 @@ public class HealthCheck extends HttpServlet {
 		health.setCheckDate(checkDate);
 		health.setMemo(memo);
 		HealthLogic healthLogic=new HealthLogic();
-		healthLogic.execute(health);
+		healthLogic.calc(health);
 		
 		try {
 			HealthDAO dao=new HealthDAO();

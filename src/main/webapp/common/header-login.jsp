@@ -10,3 +10,8 @@
 	crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar bg-body-tertiary mx-2 my-1">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Health-PinPin</a>
+  </div>
+</nav>
