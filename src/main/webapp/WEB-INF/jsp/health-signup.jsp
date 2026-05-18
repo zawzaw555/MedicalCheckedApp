@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/header-login.jsp" %>
+<%@taglib prefix="c" uri="jakarta.tags.core" %>
+<%@include file="/common/header.jsp" %>
 <div class="container mt-4 pb-1">
 	<h3 class="text-center">アカウント登録</h3>
 	<div class="row justify-content-center">
 		<div class="col-4 card p-2">
+			<c:if test="${not empty error}">
+				<p class="text-danger text-center">${error}</p>
+			</c:if>
 			<form class="px-4" action="${pageContext.request.contextPath}/servlet/SignUp.action" method="post">
   				<div class="mb-3">
     				<label for="name" class="form-label">アカウント名前</label>

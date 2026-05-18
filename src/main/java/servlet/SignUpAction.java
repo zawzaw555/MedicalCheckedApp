@@ -21,9 +21,15 @@ public class SignUpAction extends Action {
 		String name=request.getParameter("new_name");
 		String password=request.getParameter("new_password");
 		UserDAO dao=new UserDAO();
+
+		if (dao.existsName(name)) {
+			request.setAttribute("error", "このログイン名はすでに使われています。");
+			return "/WEB-INF/jsp/health-signup.jsp";
+		}
+
 		boolean result=dao.insert(name, password);
 		if (result) {
-			return "/WEB-INF/jsp/health-login.jsp";
+			return "/health-home.jsp";
 		}
 		
 		return "/WEB-INF/jsp/login-error.jsp";

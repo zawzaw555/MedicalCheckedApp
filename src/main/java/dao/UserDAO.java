@@ -33,6 +33,25 @@ public class UserDAO extends DAO {
 		con.close();
 	return user;	
 	}
+
+	// User Name Check from DB
+	public boolean existsName(String name)
+		throws Exception {
+		Connection con=getConnection();
+
+		PreparedStatement st;
+		st=con.prepareStatement(
+				"select * from users where name=?");
+		st.setString(1, name);
+		ResultSet rs=st.executeQuery();
+
+		boolean exists=rs.next();
+
+		rs.close();
+		st.close();
+		con.close();
+		return exists;
+	}
 	
 	// User Insert data to DB
 	public boolean insert(String new_name,String new_password)

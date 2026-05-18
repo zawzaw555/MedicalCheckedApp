@@ -11,15 +11,24 @@
 </head>
 <body>
 <nav class="navbar bg-body-tertiary mx-2 my-1">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Health-PinPin</a>
-	<ul class="nav justify-content-end">
-  		<li class="nav-item">
-    		<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/health-home.jsp">Home</a>
-  		</li>
-  		<li class="nav-item">
-    		<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Logout.action">ロクアウト</a>
-  		</li>
-	</ul>
-  </div>
+	<div class="container-fluid">
+		<% if (session.getAttribute("user") == null) { %>
+    		<a class="navbar-brand" href="${pageContext.request.contextPath}/health-home.jsp">Health-PinPin</a>
+			<ul class="nav justify-content-end">
+  				<li class="nav-item">
+    				<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Login.action">ロクイン</a>
+  				</li>
+			</ul>
+		<% } else { %>
+			<a class="navbar-brand" href="#">Health-PinPin</a>
+			<ul class="nav justify-content-end">
+  				<li class="nav-item">
+    				<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/servlet/HealthList.action">History</a>
+  				</li>
+  				<li class="nav-item">
+    				<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Logout.action">ロクアウト</a>
+  				</li>
+			</ul>
+		<% } %>
+	</div>
 </nav>

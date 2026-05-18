@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/header-login.jsp" %>
+<%@include file="/common/header.jsp" %>
 <div class="container mt-4 pb-1">
 	<h3 class="text-center">健康診管理アプリ</h3>
 	<div class="row justify-content-center">

@@ -6,11 +6,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import tool.HealthLogic;
 import java.io.IOException;
 import java.time.LocalDate;
 
 import bean.Health;
+import bean.User;
 import dao.HealthDAO;
 
 @WebServlet("/HealthCheck")
@@ -23,6 +25,17 @@ public class HealthCheck extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+
+	    if (session == null || session.getAttribute("user") == null) {
+	        response.sendRedirect(request.getContextPath() + "/LinkControllers?action=login");
+	        return;
+	    }
+
+	    User user = (User) session.getAttribute("user");
+	    int user_id = user.getId();
+		
 		String height = request.getParameter("height");
 		String weight = request.getParameter("weight");
 		LocalDate checkDate = LocalDate.parse(request.getParameter("date"));
@@ -42,7 +55,8 @@ public class HealthCheck extends HttpServlet {
 					health.getHeight(), 
 					health.getWeight(), 
 					health.getCheckDate(), 
-					health.getMemo()
+					health.getMemo(),
+					user_id
 				);
 		} catch(Exception e) {
 			e.printStackTrace();
