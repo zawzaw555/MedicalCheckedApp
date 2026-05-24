@@ -1,4 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +27,11 @@
 		<% } else { %>
 			<a class="navbar-brand" href="#">Health-PinPin</a>
 			<ul class="nav justify-content-end">
+			<li class="nav-item">
+    				<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/LinkControllers?action=input">データ入力</a>
+  				</li>
   				<li class="nav-item">
-    				<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/servlet/HealthList.action">History</a>
+    				<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/servlet/HealthList.action">データリスト</a>
   				</li>
   				<li class="nav-item">
     				<a class="nav-link" href="${pageContext.request.contextPath}/servlet/Logout.action">ロクアウト</a>

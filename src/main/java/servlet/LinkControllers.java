@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -27,7 +28,13 @@ public class LinkControllers extends HttpServlet {
 		switch (action) {
 		case "login"-> forword(request,response,"/WEB-INF/jsp/health-login.jsp");
 		case "home"	-> forword(request,response,"/health-home.jsp");
-		case "input"-> forword(request,response,"/WEB-INF/jsp/health-input.jsp");
+		case "input"-> {
+			if (!isLogin(request)) {
+				response.sendRedirect(request.getContextPath() + "/LinkControllers?action=login");
+				return;
+			}
+			forword(request,response,"/WEB-INF/jsp/health-input.jsp");
+		}
 		case "signup"->forword(request,response,"/WEB-INF/jsp/health-signup.jsp");
 		}
 	}
@@ -44,6 +51,11 @@ public class LinkControllers extends HttpServlet {
 		HttpServletRequest request,HttpServletResponse response,String path
 	) throws ServletException,IOException {
 		request.getRequestDispatcher(path).forward(request, response);
+	}
+
+	private boolean isLogin(HttpServletRequest request) {
+		HttpSession session=request.getSession(false);
+		return session != null && session.getAttribute("user") != null;
 	}
 	
 }

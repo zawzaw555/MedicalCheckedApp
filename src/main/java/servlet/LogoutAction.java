@@ -1,6 +1,5 @@
 package servlet;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -17,8 +16,6 @@ public class LogoutAction extends Action {
 	        session.invalidate();
 	    }
 
-	    RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/jsp/health-logout.jsp");
-	    dispatcher.forward(request, response);
-		return null;
+		return "/WEB-INF/jsp/health-logout.jsp";
 	}
 }
