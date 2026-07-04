@@ -15,7 +15,7 @@ response.setDateHeader("Expires", 0);
 	crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar bg-body-tertiary mx-2 my-1">
+<nav class="navbar shadow-sm bg-body-tertiary mx-2 my-1">
 	<div class="container-fluid">
 		<% if (session.getAttribute("user") == null) { %>
     		<a class="navbar-brand" href="${pageContext.request.contextPath}/health-home.jsp">Health-PinPin</a>

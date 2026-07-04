@@ -17,6 +17,10 @@
   				<div class="row justify-content-center">
   					<button type="submit" class="col-4 btn btn-primary" value="ログイン">ロクイン</button>
   				</div>
+  				
+				<div class="text-center my-3">
+					<a href="${pageContext.request.contextPath}/LinkControllers?action=signup">新規登録へ</a>
+				</div>
 			</form>
 		</div>
 	</div>
